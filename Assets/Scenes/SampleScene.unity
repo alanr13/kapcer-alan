@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 1966102824}
   - component: {fileID: 1966102825}
   - component: {fileID: 1966102826}
+  - component: {fileID: 1966102827}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -418,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 1966102818}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: -2.39, z: 0}
+  m_LocalPosition: {x: -0.01, y: -2.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -565,6 +566,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1966102827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966102818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0520bc130ad4941990a5547ca8f77b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidbody: {fileID: 1966102823}
 --- !u!1 &2110245626
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +708,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0036, y: -3.78, z: 0}
-  m_LocalScale: {x: 17.912027, y: 1, z: 1}
+  m_LocalScale: {x: 20.654806, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
