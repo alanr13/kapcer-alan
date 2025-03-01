@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
