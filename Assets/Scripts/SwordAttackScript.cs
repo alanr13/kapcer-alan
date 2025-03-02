@@ -5,7 +5,7 @@ public class SwordAttackScript : MonoBehaviour
     Animator anim;
     private Collider2D attackCollider;
     public int damage = 50;
-
+    public float bounceForce = 10f;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -23,12 +23,22 @@ public class SwordAttackScript : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             var enemy = collision.gameObject.GetComponent<EnemyLogic>();
             enemy.TakeDamage(gameObject.GetComponent<SwordAttackScript>());
+
+            Rigidbody2D enemyRb = collision.GetComponent<Rigidbody2D>();
+            if (enemyRb != null)
+            {
+                Vector2 direction = (collision.transform.position - transform.position).normalized;
+
+                enemyRb.linearVelocity = Vector2.zero;
+                enemyRb.AddForce(direction * bounceForce, ForceMode2D.Impulse);
+            }
         }
     }
 
