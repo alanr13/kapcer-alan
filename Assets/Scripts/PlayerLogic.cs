@@ -7,6 +7,7 @@ public class PlayerLogic : MonoBehaviour
     public int HP = 100;
 
     public GameControl gameControl;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,13 +24,6 @@ public class PlayerLogic : MonoBehaviour
         {
             rb.transform.position = new Vector2(8.9f, transform.position.y);
         }
-
-        // Deal damage to character if enemy is touched
-        //if (rb.transform.position == enemy.transform.position)
-        //{
-        //    HP -= 10;
-        //    enemy.transform.position = new Vector2(enemy.transform.position.x + 2, enemy.transform.position.y);
-        //}
 
         // Die if HP < 0
         if (HP <= 0)

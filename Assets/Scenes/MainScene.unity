@@ -242,6 +242,10 @@ PrefabInstance:
       value: 0.5307415
       objectReference: {fileID: 0}
     - target: {fileID: 3589851704287090052, guid: f33a3aaea24fe8148a31acd8f1aa672e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589851704287090052, guid: f33a3aaea24fe8148a31acd8f1aa672e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.509518
       objectReference: {fileID: 0}
@@ -283,6 +287,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8872097897891953036, guid: f33a3aaea24fe8148a31acd8f1aa672e, type: 3}
       propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872097897891953036, guid: f33a3aaea24fe8148a31acd8f1aa672e, type: 3}
+      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -727,6 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 994579147}
   moveSpeed: 3
+  damage: 10
 --- !u!61 &994579146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -761,7 +770,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.023214817, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -771,7 +780,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0464296, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &994579147
 Rigidbody2D:
@@ -1229,6 +1238,7 @@ GameObject:
   - component: {fileID: 1966102824}
   - component: {fileID: 1966102825}
   - component: {fileID: 1966102826}
+  - component: {fileID: 1966102828}
   - component: {fileID: 1966102827}
   m_Layer: 0
   m_Name: MainCharacter
@@ -1462,6 +1472,18 @@ MonoBehaviour:
   enemy: {fileID: 0}
   HP: 100
   gameControl: {fileID: 519420033}
+--- !u!114 &1966102828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966102818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2957e7211276d4343ba64b3c090adcfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2110245626
 GameObject:
   m_ObjectHideFlags: 0

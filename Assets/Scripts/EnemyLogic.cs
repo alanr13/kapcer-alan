@@ -6,14 +6,20 @@ public class EnemyLogic : MonoBehaviour
     Rigidbody2D player;
     bool isPlayerAlive = true;
     public float moveSpeed = 10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int damage = 10;
+
+    public void DealDamage()
+    {
+        var playerLogic = player.GetComponent<PlayerLogic>();
+        playerLogic.HP -= damage;
+    }
+
     void Start()
     {
         enemy = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         var move = moveSpeed * Time.deltaTime;
