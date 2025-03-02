@@ -7,11 +7,16 @@ public class EnemyLogic : MonoBehaviour
     bool isPlayerAlive = true;
     public float moveSpeed = 10;
     public int damage = 10;
+    public int HP = 100;
 
-    public void DealDamage()
+    public void DealDamage(PlayerLogic playerLogic)
     {
-        var playerLogic = player.GetComponent<PlayerLogic>();
         playerLogic.HP -= damage;
+    }
+
+    public void TakeDamage(SwordAttackScript attack)
+    {
+        HP -= attack.damage;
     }
 
     void Start()
@@ -35,6 +40,11 @@ public class EnemyLogic : MonoBehaviour
         else if (enemy.transform.position.x <= -8.9)
         {
             enemy.transform.position = new Vector2(8.9f, transform.position.y);
+        }
+
+        if (HP <= 0)
+        {
+            Object.Destroy(gameObject);
         }
     }
 }

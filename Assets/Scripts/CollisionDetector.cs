@@ -7,7 +7,7 @@ public class CollisionDetector : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             var collisionObject = collision.gameObject.GetComponent<EnemyLogic>();
-            collisionObject.DealDamage();
+            collisionObject.DealDamage(gameObject.GetComponent<PlayerLogic>());
         }
     }
 }
