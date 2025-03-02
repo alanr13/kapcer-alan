@@ -39,7 +39,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            rb.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            rb.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 
     private void FixedUpdate()
