@@ -17,6 +17,7 @@ public class EnemyLogic : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Rigidbody2D>();
+        enemy.freezeRotation = true;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 

@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20.88
-  jumpForce: 10
+  jumpForce: 15
   maxSpeed: 5
 --- !u!114 &1966102826
 MonoBehaviour:
