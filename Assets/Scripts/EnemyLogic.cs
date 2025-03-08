@@ -48,4 +48,5 @@ public class EnemyLogic : MonoBehaviour
             Object.Destroy(gameObject);
         }
     }
+
 }
